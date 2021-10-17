@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import MovieList from './componants/MovieList'
+import NavBarMovies from './componants/NavBarMovies'
+import { Row,Container } from "react-bootstrap";
+import BtnModal from "./componants/BtnModal";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Modal/> */}
+      <NavBarMovies/>
+      <h1>Join the Show</h1>
+    <BtnModal/>
+
+
+      <Container >
+  <Row md={3}>
+    <MovieList/>
+  </Row>
+</Container>
     </div>
   );
 }
